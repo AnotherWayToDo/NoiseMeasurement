@@ -3,31 +3,57 @@
 
 = Noise Measurement
 
-The aim of this project is to build a device that will measure and report in real time the noise level of the room where it was installed. +
-The initial idea behind this project was to measure the noise level in an house/living room but it must possible to extend it to an workplace/openspace.
+== Aim of the project
+
+The aim of this project is to build a device that will measure and report in real time the noise level of the room where it was installed.
+
+The initial idea behind this project was to measure the noise level in an house/living room where childrens could make a lot of noise ... but it can also be used in a workplace/openspace if you've some noisy colleagues.
+
+
+=== Main ideas
+
+The device must run 24/24 7/7. It measure the noise level and visually report it using RGB leds. +
+RGB leds color will be based on the noise level:
+
+[cols="^1,^1,5"]
+|===
+^| **Color**    ^| **Decibel range**    ^| **Meaning**
+ | GREEN         | [0,50db[              | Quiet space
+ | ORANGE        | [50db, 60db[          | Normal sound level for a working place 
+ | RED           | [60db, [              | Noise level too hight ... need to more calm
+|===
 
 
 
+=== Project needs
 
-== Needs
-
-The solution must:
-
-* be a **low cost** solution
-* be **easy and simple to build** to allow many peoples to build it 
-* report **noise level measurement in a visual way** (RGB led to display the noise level)
-* (optional) propose a **Wifi (or equivalent) communication** to upload noise measurement to a dedicated service (a service will be proposed in parallel)
-
+* basic needs
+** low cost 
+** visualization of the noise level
+* advanced needs
+** wifi connection to report noise measure
+** ???  
 
 
-== Strategy 
 
-=== A prototype based on Arduino - V0
+== Solution's design
 
-To make a prototype we can target an link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**]. This board is (too) costly for the final target but it embed all needed components (and much more).
+=== Prototype
+
+To make a prototype we can target an link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**].
+
+This board is :
+
+* (too) costly for the final target
+* embed a lot of unneeded components
+
+
+But it'll allow too easily make a first / basic prototype.
 
 The microphone on the board is an **MP34DT05**.
 
 
-=== Target - V1
+
+
+=== Target solution - V1
 
