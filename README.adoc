@@ -1,1 +1,33 @@
-test
+:sectnums: 
+:toc: auto
+
+= Noise Measurement
+
+The aim of this project is to build a device that will measure and report in real time the noise level of the room where it was installed. +
+The initial idea behind this project was to measure the noise level in an house/living room but it must possible to extend it to an workplace/openspace.
+
+
+
+
+== Needs
+
+The solution must:
+
+* be a **low cost** solution
+* be **easy and simple to build** to allow many peoples to build it 
+* report **noise level measurement in a visual way** (RGB led to display the noise level)
+* (optional) propose a **Wifi (or equivalent) communication** to upload noise measurement to a dedicated service (a service will be proposed in parallel)
+
+
+
+== Strategy 
+
+=== A prototype based on Arduino - V0
+
+To make a prototype we can target an link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**]. This board is (too) costly for the final target but it embed all needed components (and much more).
+
+The microphone on the board is an **MP34DT05**.
+
+
+=== Target - V1
+
