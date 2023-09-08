@@ -13,7 +13,7 @@ The initial idea behind this project was to measure the noise level in an house/
 === Main ideas
 
 The device must run 24/24 7/7. It measure the noise level and visually report it using RGB leds. +
-RGB leds color will be based on the noise level:
+RGB leds color will be based on the noise level. For exemple, we can imagine the following configuration:
 
 [cols="^1,^1,5"]
 |===
@@ -23,6 +23,10 @@ RGB leds color will be based on the noise level:
  | RED           | [60db, [              | Noise level too hight ... need to more calm
 |===
 
+[NOTE]
+====
+It could be insterresting to have values related to human health.
+====
 
 
 === Project needs
@@ -36,24 +40,43 @@ RGB leds color will be based on the noise level:
 
 
 
+
 == Solution's design
 
 === Prototype
 
-To make a prototype we can target an link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**].
+To make a prototype we've targetted an link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**].
 
 This board is :
 
 * (too) costly for the final target
 * embed a lot of unneeded components
 
+but it'll allow to make a first / basic prototype really easily.
 
-But it'll allow too easily make a first / basic prototype.
-
-The microphone on the board is an **MP34DT05**.
-
+The microphone on the board is an **MP34DT05** that work on **PDM mode**.
 
 
+==== NoiseMeasurement serial plotter
 
-=== Target solution - V1
+This first part will focus on the noise measurement part. We'll simply ouput the result using the serial plotter to show the result. 
+
+#TODO: Add code details#
+
+
+==== NoiseMeasurement RGB led
+
+This second part will complete the serial outpu with a RGB led display system. Instead of using the onboard led that is not really clearly visible, we'll use an additionnal led.
+
+#TODO: Add code details#
+
+==== What next ?
+
+Now that we have made a basic prototype we can go deeper in the final project.
+
+* must we go deeper in noise level calculation ?
+* what feature did we want to add ? (Wifi)
+* what design does we need ? 
+
+
 
