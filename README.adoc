@@ -45,28 +45,42 @@ It could be insterresting to have values related to human health.
 
 === Prototype
 
-To make a prototype we've targetted an link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**].
+To make a prototype we can target 2 boards:
 
-This board is :
+* link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**].
+* link:https://docs.arduino.cc/hardware/nano-rp2040-connect[**Arduino Nano RP2040 Connect**].
+
+
+These boards are:
 
 * (too) costly for the final target
 * embed a lot of unneeded components
 
-but it'll allow to make a first / basic prototype really easily.
+but they'll allow us to make a first/basic prototype really easily.
 
-The microphone on the board is an **MP34DT05** that work on **PDM mode**.
+In addition, we've two software solutions:
+
+* C/C++ (using Arduino)
+* circuitPython / micropython
 
 
-==== NoiseMeasurement serial plotter
+==== NoiseMeasurement with Serial Plotter
 
-This first part will focus on the noise measurement part. We'll simply ouput the result using the serial plotter to show the result. 
+This first prototype will focus on the noise measurement part. We'll simply ouput the result using the serial plotter to show the result. +
+Nothing hard ... all is already done in the exemple: https://docs.arduino.cc/learn/built-in-libraries/pdm
+
+
+See link:'.\src\BLE_33_Sense\noise_measurement_proto_01\noise_measurement_proto_01.ino'[code]
+
+image:./imgs/Nano33BLESensse_proto01_plotter.png[format="png"]
+
 
 #TODO: Add code details#
 
 
 ==== NoiseMeasurement RGB led
 
-This second part will complete the serial outpu with a RGB led display system. Instead of using the onboard led that is not really clearly visible, we'll use an additionnal led.
+This second prototype will complete the serial output with a RGB led display system. Instead of using the onboard led that is not really clearly visible, we'll use an additionnal led.
 
 #TODO: Add code details#
 
