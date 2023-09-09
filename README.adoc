@@ -5,15 +5,17 @@
 
 == Aim of the project
 
-The aim of this project is to build a device that will measure and report in real time the noise level of the room where it was installed.
+The aim of this project is to build a device to measure and report in real time the noise level of the room where it was installed.
 
-The initial idea behind this project was to measure the noise level in an house/living room where childrens could make a lot of noise ... but it can also be used in a workplace/openspace if you've some noisy colleagues.
+The initial idea behind this project was to measure the noise level in an house/living room where childrens could make a lot of noise ... but it can also be used in a workplace/openspace if there is some noisy colleagues.
+
+
 
 
 === Main ideas
 
-The device must run 24/24 7/7. It measure the noise level and visually report it using RGB leds. +
-RGB leds color will be based on the noise level. For exemple, we can imagine the following configuration:
+The device must run 24/24 and 7/7. It measure the noise level and visually report it using RGB leds. +
+RGB leds color will be based on the noise level measure. For exemple, we can imagine the following configuration:
 
 [cols="^1,^1,5"]
 |===
@@ -29,13 +31,15 @@ It could be insterresting to have values related to human health.
 ====
 
 
+
+
 === Project needs
 
-* basic needs
-** low cost 
+* Basic needs
+** low cost - too allow everyone to build it
 ** visualization of the noise level
-* advanced needs
-** wifi connection to report noise measure
+* Advanced needs
+** wifi connection to report noise measures
 ** ???  
 
 
@@ -43,9 +47,15 @@ It could be insterresting to have values related to human health.
 
 == Solution's design
 
+Firstly, we have to made a prototype to test if the ideas are feasible.
+
+* can we make a correct measure with an onboard mic ?
+* can we make it using only one mic ?
+* ...
+
 === Prototype
 
-To make a prototype we can target 2 boards:
+To make a prototype we have targeted 2 boards:
 
 * link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**].
 * link:https://docs.arduino.cc/hardware/nano-rp2040-connect[**Arduino Nano RP2040 Connect**].
@@ -53,29 +63,30 @@ To make a prototype we can target 2 boards:
 
 These boards are:
 
-* (too) costly for the final target
+* maybe too costly for the final target
 * embed a lot of unneeded components
 
-but they'll allow us to make a first/basic prototype really easily.
+but they'll allow us to make a first/basic prototype really easily. +
+In addition, this choice allow us to use 2 software solutions:
 
-In addition, we've two software solutions:
-
-* C/C++ (using Arduino)
+* C/C++ (using Arduino or others)
 * circuitPython / micropython
+
 
 
 ==== NoiseMeasurement with Serial Plotter
 
 This first prototype will focus on the noise measurement part. We'll simply ouput the result using the serial plotter to show the result. +
-Nothing hard ... all is already done in the exemple: https://docs.arduino.cc/learn/built-in-libraries/pdm
+Nothing hard to do ... all is already done in the following exemple: https://docs.arduino.cc/learn/built-in-libraries/pdm
 
 
-See link:'.\src\BLE_33_Sense\noise_measurement_proto_01\noise_measurement_proto_01.ino'[code]
+
+Here is an exemple of the graph generated in real time.
 
 image:./imgs/Nano33BLESensse_proto01_plotter.png[format="png"]
 
+See the link:src\BLE_33_Sense\noise_measurement_proto_01\noise_measurement_proto_01.ino[prototype code] for more details.
 
-#TODO: Add code details#
 
 
 ==== NoiseMeasurement RGB led
