@@ -37,7 +37,8 @@ void setup()
   PDM.onReceive(onPDMdata);
 
   // optionally set the gain, defaults to 20
-  // PDM.setGain(30);
+  // have to change it to match approx the value spoted on my iPhone
+  PDM.setGain(50);
 
   // initialize PDM with:
   // - one channel (mono mode)
