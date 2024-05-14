@@ -93,13 +93,9 @@ See the link:src\BLE_33_Sense\noise_measurement_proto_01\noise_measurement_proto
 
 This second kind of prototype will complete the serial output with a RGB led display system. Instead of using the onboard led that is not really clearly visible, we'll use an additionnal leds. This is the reason why we have select the CircuitPlayground Express. This board embed 10 NeoPixels leds directly on the PCB. 
 
-See the link:src\CircuitPlayground_Express\SoundMeter_01\SoundMeter_01.ino[prototype code] for more details.
+See the link:src\CircuitPlayground_Express\Sound_Meter_01\Sound_Meter_01.ino[prototype code] for more details.
 
-
-#TODO: Add code details#
-
-
-
+Each LED will be updated every 50ms (geiven the current code version). The color it the LED will display depend of the DB level measured (in fact the mean value of the last 25 (NB_SAMPLE) levels measured). 
 
 
 
