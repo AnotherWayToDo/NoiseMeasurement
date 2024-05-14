@@ -53,12 +53,13 @@ Firstly, we have to made a prototype to test if the ideas are feasible.
 * can we make it using only one mic ?
 * ...
 
-=== Prototype
+=== Prototypes
 
-To make a prototype we have targeted 2 boards:
+To make a prototype we have targeted 3 boards:
 
 * link:https://docs.arduino.cc/hardware/nano-33-ble-sense[**Arduino Nano 33 BLE Sense**].
 * link:https://docs.arduino.cc/hardware/nano-rp2040-connect[**Arduino Nano RP2040 Connect**].
+* link:https://www.adafruit.com/product/3333[**CircuitPlayground Express**]
 
 
 These boards are:
@@ -74,11 +75,10 @@ In addition, this choice allow us to use 2 software solutions:
 
 
 
-==== NoiseMeasurement with Serial Plotter
+==== NoiseMeasurement and Serial Plotter
 
-This first prototype will focus on the noise measurement part. We'll simply ouput the result using the serial plotter to show the result. +
+This first kind prototype will focus on the noise measurement part. We'll simply ouput the result using the serial plotter to show the result. +
 Nothing hard to do ... all is already done in the following exemple: https://docs.arduino.cc/learn/built-in-libraries/pdm
-
 
 
 Here is an exemple of the graph generated in real time.
@@ -89,11 +89,19 @@ See the link:src\BLE_33_Sense\noise_measurement_proto_01\noise_measurement_proto
 
 
 
-==== NoiseMeasurement RGB led
+==== NoiseMeasurement and RGB led
 
-This second prototype will complete the serial output with a RGB led display system. Instead of using the onboard led that is not really clearly visible, we'll use an additionnal led.
+This second kind of prototype will complete the serial output with a RGB led display system. Instead of using the onboard led that is not really clearly visible, we'll use an additionnal leds. This is the reason why we have select the CircuitPlayground Express. This board embed 10 NeoPixels leds directly on the PCB. 
+
+See the link:src\CircuitPlayground_Express\SoundMeter_01\SoundMeter_01.ino[prototype code] for more details.
+
 
 #TODO: Add code details#
+
+
+
+
+
 
 ==== What next ?
 
